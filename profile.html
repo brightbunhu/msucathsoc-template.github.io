@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - MSU CATHSOC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>MSU Catholic Students Union</h1>
+            <p>Member Profile</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="profile.html" class="active">My Profile</a></li>
+                <li><a href="#" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <div class="profile-container">
+            <!-- Profile Header -->
+            <section class="profile-header card">
+                <div class="profile-image">
+                    <img src="img/default-avatar.png" alt="Profile Picture">
+                    <button class="change-photo-btn">
+                        <i class="fas fa-camera"></i> Change Photo
+                    </button>
+                </div>
+                <div class="profile-info">
+                    <h2>John Doe</h2>
+                    <p class="student-id">R2100001A</p>
+                    <p class="member-since">Member since: January 2024</p>
+                </div>
+            </section>
+
+            <!-- Personal Information -->
+            <section class="profile-section card">
+                <h3><i class="fas fa-user"></i> Personal Information</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Name</label>
+                        <p>John</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Surname</label>
+                        <p>Doe</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Student ID</label>
+                        <p>R2100001A</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Email</label>
+                        <p>doej@students.msu.ac.zw</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Academic Information -->
+            <section class="profile-section card">
+                <h3><i class="fas fa-graduation-cap"></i> Academic Information</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Level of Study</label>
+                        <p>2.1</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Program</label>
+                        <p>Computer Science</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Faculty</label>
+                        <p>Engineering</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Parish Information -->
+            <section class="profile-section card">
+                <h3><i class="fas fa-church"></i> Parish Information</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Home Parish</label>
+                        <p>St Mary's Cathedral</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Parish Priest</label>
+                        <p>Rev. Fr. John Smith</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Payment History -->
+            <section class="profile-section card">
+                <h3><i class="fas fa-history"></i> Payment History</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-03-15</td>
+                            <td>Easter Retreat</td>
+                            <td>$15.00</td>
+                            <td><span class="status-paid">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td>2024-02-01</td>
+                            <td>Annual Subscription</td>
+                            <td>$10.00</td>
+                            <td><span class="status-paid">Paid</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MSU Catholic Students Union - Midlands State University</p>
+        <p>For God and Learning</p>
+    </footer>
+</body>
+</html> 

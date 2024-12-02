@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Payments - MSU CATHSOC</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>MSU Catholic Students Union</h1>
+            <p>Payment Management</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Main Site</a></li>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="payments.html" class="active">Manage Payments</a></li>
+                <li><a href="metrics.html">Financial Metrics</a></li>
+                <li><a href="#" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <!-- Record Payment Section -->
+        <section class="record-payment-section">
+            <h2><i class="fas fa-plus-circle"></i> Record New Payment</h2>
+            <div class="card">
+                <form class="payment-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="memberSelect">Select Member</label>
+                            <select id="memberSelect" required>
+                                <option value="">Choose member...</option>
+                                <option value="1">John Doe - R2100001A</option>
+                                <option value="2">Jane Smith - R2100002B</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="paymentType">Payment Type</label>
+                            <select id="paymentType" required>
+                                <option value="">Select type...</option>
+                                <option value="subscription">Subscription</option>
+                                <option value="event">Event Payment</option>
+                                <option value="offering">Sunday Offering</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount">Amount</label>
+                            <input type="number" id="amount" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="paymentMethod">Payment Method</label>
+                            <select id="paymentMethod" required>
+                                <option value="cash">Cash</option>
+                                <option value="ecocash">EcoCash</option>
+                                <option value="bank">Bank Transfer</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Notes</label>
+                        <textarea id="notes" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Record Payment</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Payment History -->
+        <section class="payment-history">
+            <h2><i class="fas fa-history"></i> Payment History</h2>
+            <div class="card">
+                <div class="filters">
+                    <div class="form-group">
+                        <label for="filterType">Filter by Type</label>
+                        <select id="filterType">
+                            <option value="all">All Payments</option>
+                            <option value="subscription">Subscriptions</option>
+                            <option value="event">Event Payments</option>
+                            <option value="offering">Offerings</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dateRange">Date Range</label>
+                        <input type="date" id="dateFrom">
+                        <span>to</span>
+                        <input type="date" id="dateTo">
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Member</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Method</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-03-15</td>
+                            <td>John Doe</td>
+                            <td>Event Payment</td>
+                            <td>$15.00</td>
+                            <td>EcoCash</td>
+                            <td><span class="status-completed">Completed</span></td>
+                            <td>
+                                <button class="btn btn-small btn-secondary"><i class="fas fa-edit"></i></button>
+                                <button class="btn btn-small btn-primary"><i class="fas fa-print"></i></button>
+                            </td>
+                        </tr>
+                        <!-- More payment records... -->
+                    </tbody>
+                </table>
+
+                <div class="table-actions">
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-file-export"></i> Export to Excel
+                    </button>
+                    <div class="pagination">
+                        <button class="btn btn-small">&laquo; Previous</button>
+                        <span>Page 1 of 5</span>
+                        <button class="btn btn-small">Next &raquo;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MSU Catholic Students Union - Midlands State University</p>
+        <p>For God and Learning</p>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Overview - MSU CATHSOC</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>MSU Catholic Students Union</h1>
+            <p>Financial Overview</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Main Site</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="posts.html">Manage Posts</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="metrics.html" class="active">Financial Overview</a></li>
+                <li><a href="#" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <!-- Financial Summary -->
+        <section class="metrics-summary">
+            <h2><i class="fas fa-chart-line"></i> Financial Summary</h2>
+            <div class="grid grid-4">
+                <div class="card metric-card">
+                    <h3>Total Collections</h3>
+                    <p class="metric-value">$2,500.00</p>
+                    <p class="metric-change positive">+15% from last month</p>
+                </div>
+                <div class="card metric-card">
+                    <h3>Subscriptions</h3>
+                    <p class="metric-value">$1,200.00</p>
+                    <p class="metric-change positive">+8% from last month</p>
+                </div>
+                <div class="card metric-card">
+                    <h3>Event Revenue</h3>
+                    <p class="metric-value">$800.00</p>
+                    <p class="metric-change positive">+25% from last month</p>
+                </div>
+                <div class="card metric-card">
+                    <h3>Sunday Offerings</h3>
+                    <p class="metric-value">$500.00</p>
+                    <p class="metric-change neutral">No change</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Statistics -->
+        <section class="payment-statistics">
+            <h2><i class="fas fa-chart-pie"></i> Payment Statistics</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Member Payment Status</h3>
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <span>Paid Members</span>
+                            <span class="stat-value">85%</span>
+                        </div>
+                        <div class="stat-item">
+                            <span>Pending Payments</span>
+                            <span class="stat-value">15%</span>
+                        </div>
+                        <div class="stat-item">
+                            <span>Total Members</span>
+                            <span class="stat-value">150</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Event Payment Status</h3>
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <span>Easter Retreat</span>
+                            <span class="stat-value">45 Paid</span>
+                        </div>
+                        <div class="stat-item">
+                            <span>Pending</span>
+                            <span class="stat-value">15</span>
+                        </div>
+                        <div class="stat-item">
+                            <span>Total Expected</span>
+                            <span class="stat-value">$900.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Transactions -->
+        <section class="transactions">
+            <h2><i class="fas fa-history"></i> Recent Transactions</h2>
+            <div class="card">
+                <div class="filters">
+                    <div class="form-group">
+                        <label for="transactionType">Type</label>
+                        <select id="transactionType">
+                            <option value="all">All Transactions</option>
+                            <option value="subscription">Subscriptions</option>
+                            <option value="event">Event Payments</option>
+                            <option value="offering">Offerings</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Date Range</label>
+                        <div class="date-range">
+                            <input type="date" id="startDate">
+                            <span>to</span>
+                            <input type="date" id="endDate">
+                        </div>
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Member</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-03-15</td>
+                            <td>John Doe</td>
+                            <td>Easter Retreat Payment</td>
+                            <td>$15.00</td>
+                            <td><span class="status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>2024-03-14</td>
+                            <td>Jane Smith</td>
+                            <td>Monthly Subscription</td>
+                            <td>$10.00</td>
+                            <td><span class="status-completed">Completed</span></td>
+                        </tr>
+                        <!-- More transaction rows... -->
+                    </tbody>
+                </table>
+
+                <div class="table-footer">
+                    <div class="pagination">
+                        <button class="btn btn-small">&laquo; Previous</button>
+                        <span>Page 1 of 5</span>
+                        <button class="btn btn-small">Next &raquo;</button>
+                    </div>
+                    <div class="export-options">
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-file-excel"></i> Export to Excel
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-file-pdf"></i> Export to PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Insights -->
+        <section class="insights">
+            <h2><i class="fas fa-lightbulb"></i> Payment Insights</h2>
+            <div class="grid grid-3">
+                <div class="card insight-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Growth Trend</h3>
+                    <p>15% increase in overall collections compared to last month</p>
+                </div>
+                <div class="card insight-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Member Participation</h3>
+                    <p>85% of members are up to date with their subscriptions</p>
+                </div>
+                <div class="card insight-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Event Success</h3>
+                    <p>75% of registered members have paid for Easter Retreat</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MSU Catholic Students Union - Midlands State University</p>
+        <p>For God and Learning</p>
+    </footer>
+</body>
+</html> 

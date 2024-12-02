@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Executives - MSU CATHSOC</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>MSU Catholic Students Union</h1>
+            <p>Manage Executives</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Main Site</a></li>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="manage-executives.html" class="active">Manage Executives</a></li>
+                <li><a href="#" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <!-- Add New Executive Section -->
+        <section class="add-executive-section">
+            <h2><i class="fas fa-user-plus"></i> Add New Executive</h2>
+            <div class="card">
+                <form class="executive-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="memberSelect">Select Member</label>
+                            <select id="memberSelect" required>
+                                <option value="">Choose a member...</option>
+                                <option value="1">John Doe - R2100001A</option>
+                                <option value="2">Jane Smith - R2100002B</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="position">Position</label>
+                            <select id="position" required>
+                                <option value="">Select Position</option>
+                                <option value="president">President</option>
+                                <option value="secretary">Secretary</option>
+                                <option value="treasurer">Treasurer</option>
+                                <option value="music_director">Music Director</option>
+                                <option value="liturgist">Liturgist</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Add Executive
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Current Executives Section -->
+        <section class="current-executives">
+            <h2><i class="fas fa-users-cog"></i> Current Executives</h2>
+            <div class="executives-grid">
+                <!-- President -->
+                <div class="card executive-card">
+                    <div class="executive-header">
+                        <img src="../img/default-avatar.png" alt="President">
+                        <div class="executive-info">
+                            <h3>Tozana Shelton K</h3>
+                            <p class="position">President</p>
+                        </div>
+                        <div class="executive-actions">
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-danger">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="executive-details">
+                        <p><i class="fas fa-id-card"></i> R2034567X</p>
+                        <p><i class="fas fa-envelope"></i> tozanas@students.msu.ac.zw</p>
+                        <p><i class="fas fa-phone"></i> +263 77 234 5678</p>
+                    </div>
+                </div>
+
+                <!-- Secretary -->
+                <div class="card executive-card">
+                    <div class="executive-header">
+                        <img src="../img/default-avatar.png" alt="Secretary">
+                        <div class="executive-info">
+                            <h3>Tanyaradzwa Rumema</h3>
+                            <p class="position">Organizing Secretary</p>
+                        </div>
+                        <div class="executive-actions">
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-danger">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="executive-details">
+                        <p><i class="fas fa-id-card"></i> R2056789Z</p>
+                        <p><i class="fas fa-envelope"></i> rumemat@students.msu.ac.zw</p>
+                        <p><i class="fas fa-phone"></i> +263 77 456 7890</p>
+                    </div>
+                </div>
+
+                <!-- More executive cards... -->
+            </div>
+        </section>
+
+        <!-- Position History Section -->
+        <section class="position-history">
+            <h2><i class="fas fa-history"></i> Position History</h2>
+            <div class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Name</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>President</td>
+                            <td>Tozana Shelton K</td>
+                            <td>Jan 2024</td>
+                            <td>Present</td>
+                            <td><span class="status-active">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td>President</td>
+                            <td>Previous President</td>
+                            <td>Jan 2023</td>
+                            <td>Dec 2023</td>
+                            <td><span class="status-inactive">Past</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MSU Catholic Students Union - Midlands State University</p>
+        <p>For God and Learning</p>
+    </footer>
+</body>
+</html> 

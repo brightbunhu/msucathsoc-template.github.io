@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayers - MSU Catholic Students Union</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>MSU Catholic Students Union</h1>
+            <p>Daily Prayers & Devotions</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="prayers.html" class="active">Prayers</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <!-- Daily Prayer Section -->
+        <section class="daily-prayer-section">
+            <h2><i class="fas fa-pray"></i> Daily Prayer</h2>
+            <div class="card featured">
+                <div class="prayer-content">
+                    <h3>Prayer of the Day</h3>
+                    <p class="prayer-text">
+                        "Lord, make me an instrument of your peace.<br>
+                        Where there is hatred, let me sow love;<br>
+                        Where there is injury, pardon;<br>
+                        Where there is doubt, faith;<br>
+                        Where there is despair, hope;<br>
+                        Where there is darkness, light;<br>
+                        Where there is sadness, joy."
+                    </p>
+                    <p class="prayer-author">- Prayer of St. Francis</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rosary Section -->
+        <section class="rosary-section">
+            <h2><i class="fas fa-cross"></i> Today's Rosary Mystery</h2>
+            <div class="card">
+                <h3>Glorious Mysteries</h3>
+                <p class="text-center">(Prayed on Wednesday and Sunday)</p>
+                <div class="mysteries-list grid grid-2">
+                    <div class="mystery">
+                        <h4>1. The Resurrection</h4>
+                        <p>Jesus rises from the dead</p>
+                    </div>
+                    <div class="mystery">
+                        <h4>2. The Ascension</h4>
+                        <p>Jesus ascends into Heaven</p>
+                    </div>
+                    <div class="mystery">
+                        <h4>3. The Descent of the Holy Spirit</h4>
+                        <p>The Holy Spirit comes at Pentecost</p>
+                    </div>
+                    <div class="mystery">
+                        <h4>4. The Assumption</h4>
+                        <p>Mary is taken into Heaven</p>
+                    </div>
+                    <div class="mystery">
+                        <h4>5. The Coronation</h4>
+                        <p>Mary is crowned Queen of Heaven and Earth</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Catholic Prayers -->
+        <section class="common-prayers-section">
+            <h2><i class="fas fa-book-open"></i> Common Catholic Prayers</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Our Father</h3>
+                    <div class="prayer-content">
+                        <p class="prayer-text">Our Father, who art in heaven, hallowed be thy name...</p>
+                        <button class="btn btn-secondary mt-2">Read Full Prayer</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Hail Mary</h3>
+                    <div class="prayer-content">
+                        <p class="prayer-text">Hail Mary, full of grace, the Lord is with thee...</p>
+                        <button class="btn btn-secondary mt-2">Read Full Prayer</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Glory Be</h3>
+                    <div class="prayer-content">
+                        <p class="prayer-text">Glory be to the Father, and to the Son, and to the Holy Spirit...</p>
+                        <button class="btn btn-secondary mt-2">Read Full Prayer</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Apostles' Creed</h3>
+                    <div class="prayer-content">
+                        <p class="prayer-text">I believe in God, the Father Almighty, Creator of heaven and earth...</p>
+                        <button class="btn btn-secondary mt-2">Read Full Prayer</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prayer Intentions -->
+        <section class="prayer-intentions">
+            <h2><i class="fas fa-heart"></i> Prayer Intentions</h2>
+            <div class="card">
+                <p class="text-center mb-2">Submit your prayer intentions to be included in our daily prayers.</p>
+                <form class="prayer-form">
+                    <div class="form-group">
+                        <label for="intention">Your Prayer Intention</label>
+                        <textarea id="intention" rows="4" placeholder="Share your prayer intention..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox"> Submit anonymously
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Intention</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MSU Catholic Students Union - Midlands State University</p>
+        <p>For God and Learning</p>
+    </footer>
+</body>
+</html> 

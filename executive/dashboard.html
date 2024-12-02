@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Dashboard - MSU CATHSOC</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>MSU Catholic Students Union</h1>
+            <p>Executive Dashboard</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Main Site</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="posts.html">Manage Posts</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="metrics.html">View Metrics</a></li>
+                <li><a href="members.html">Members</a></li>
+                <!-- Treasurer-only menu items -->
+                <li class="treasurer-only" style="display: none;">
+                    <a href="payments.html">Manage Payments</a>
+                </li>
+                <li><a href="#" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="user-info card">
+                <img src="../img/default-avatar.png" alt="Executive">
+                <h3 id="executiveName">Loading...</h3>
+                <p id="executiveRole">Loading...</p>
+                <!-- Personal Payment Status -->
+                <div class="payment-status">
+                    <h4>My Payment Status</h4>
+                    <div class="status-item">
+                        <span>Subscription:</span>
+                        <span class="status-badge paid">Paid</span>
+                    </div>
+                    <div class="status-item">
+                        <span>Easter Retreat:</span>
+                        <span class="status-badge pending">Pending</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#overview" class="active"><i class="fas fa-home"></i> Overview</a></li>
+                    <li><a href="#announcements"><i class="fas fa-bullhorn"></i> Announcements</a></li>
+                    <li><a href="#upcoming-events"><i class="fas fa-calendar"></i> Events</a></li>
+                    <li><a href="#tasks"><i class="fas fa-tasks"></i> Tasks</a></li>
+                    <!-- Treasurer-only section -->
+                    <li class="treasurer-only" style="display: none;">
+                        <a href="#financial"><i class="fas fa-money-bill"></i> Financial</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="dashboard-content">
+            <!-- Executive Status Summary -->
+            <section class="executive-status">
+                <h2>My Status</h2>
+                <div class="grid grid-3">
+                    <div class="card status-card">
+                        <h3>Subscription Status</h3>
+                        <div class="status-details">
+                            <p class="status paid">Paid</p>
+                            <p class="amount">$10.00</p>
+                            <p class="date">Paid on: March 1, 2024</p>
+                        </div>
+                    </div>
+                    <div class="card status-card">
+                        <h3>Event Payments</h3>
+                        <div class="status-details">
+                            <p class="status pending">Easter Retreat Pending</p>
+                            <p class="amount">$15.00 Due</p>
+                            <p class="date">Due by: March 20, 2024</p>
+                        </div>
+                    </div>
+                    <div class="card status-card">
+                        <h3>Attendance</h3>
+                        <div class="status-details">
+                            <p>Last 4 Weeks: 90%</p>
+                            <p>Meetings: 8/8</p>
+                            <p>Mass: 7/8</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Common Executive Features -->
+            <section class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="grid grid-3">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> New Announcement
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-calendar-plus"></i> Create Event
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Send Mass Email
+                    </button>
+                </div>
+            </section>
+
+            <!-- Treasurer-only Section -->
+            <section id="financial" class="treasurer-only" style="display: none;">
+                <h2>Financial Overview</h2>
+                <div class="grid grid-3">
+                    <div class="card metric-card">
+                        <h3>Total Collections</h3>
+                        <p class="metric-value">$2,500.00</p>
+                        <p class="metric-change positive">+15% from last month</p>
+                    </div>
+                    <!-- More financial metrics... -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MSU Catholic Students Union - Midlands State University</p>
+        <p>For God and Learning</p>
+    </footer>
+
+    <script>
+        // Check if user is treasurer and show/hide relevant sections
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            const treasurerElements = document.querySelectorAll('.treasurer-only');
+            
+            if (currentUser && currentUser.role === 'treasurer') {
+                treasurerElements.forEach(el => el.style.display = 'block');
+            }
+
+            // Set executive name and role
+            document.getElementById('executiveName').textContent = currentUser?.fullName || 'Loading...';
+            document.getElementById('executiveRole').textContent = currentUser?.position || 'Loading...';
+        });
+    </script>
+</body>
+</html> 

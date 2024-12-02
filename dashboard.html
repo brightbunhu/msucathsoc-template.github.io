@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - MSU CATHSOC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>MSU Catholic Students Union</h1>
+            <p>Member Dashboard</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="profile.html">My Profile</a></li>
+                <li><a href="#" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="user-info card">
+                <img src="img/default-avatar.png" alt="User Avatar">
+                <h3>John Doe</h3>
+                <p>Member</p>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#overview" class="active"><i class="fas fa-home"></i> Overview</a></li>
+                    <li><a href="#events"><i class="fas fa-calendar"></i> My Events</a></li>
+                    <li><a href="#payments"><i class="fas fa-money-bill"></i> Payments</a></li>
+                    <li><a href="#announcements"><i class="fas fa-bullhorn"></i> Announcements</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="dashboard-content">
+            <!-- Overview Section -->
+            <section id="overview" class="dashboard-section">
+                <h2>Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-calendar"></i>
+                        <h3>Upcoming Events</h3>
+                        <p class="stat-number">3</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-money-bill"></i>
+                        <h3>Pending Payments</h3>
+                        <p class="stat-number">1</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Events Attended</h3>
+                        <p class="stat-number">12</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Events Section -->
+            <section id="events" class="dashboard-section">
+                <h2>My Events</h2>
+                <div class="events-list">
+                    <div class="event-card">
+                        <h3>Easter Retreat 2024</h3>
+                        <p><i class="fas fa-calendar"></i> March 25-27, 2024</p>
+                        <p><i class="fas fa-map-marker-alt"></i> St Mary's Parish Senga</p>
+                        <p><i class="fas fa-dollar-sign"></i> Fee: $15.00</p>
+                        <span class="status-registered">Registered</span>
+                    </div>
+                    <!-- More events... -->
+                </div>
+            </section>
+
+            <!-- Payments Section -->
+            <section id="payments" class="dashboard-section">
+                <h2>Recent Payments</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-03-15</td>
+                            <td>Easter Retreat</td>
+                            <td>$15.00</td>
+                            <td><span class="status-paid">Paid</span></td>
+                        </tr>
+                        <!-- More payments... -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Announcements Section -->
+            <section id="announcements" class="dashboard-section">
+                <h2>Recent Announcements</h2>
+                <div class="announcements-list">
+                    <div class="announcement-card">
+                        <h3>Holy Week Schedule</h3>
+                        <p>Schedule for Holy Week services including Palm Sunday, Holy Thursday, Good Friday, and Easter Vigil.</p>
+                        <small>Posted by: Rev. Fr. Simawedwa Makwiramiti</small>
+                    </div>
+                    <!-- More announcements... -->
+                </div>
+            </section>
+
+            <!-- Regular Activities Section -->
+            <section id="regular-activities" class="dashboard-section">
+                <h2>Regular Schedule</h2>
+                <div class="regular-activities">
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <i class="fas fa-church"></i>
+                            <div class="activity-details">
+                                <h4>Sunday Mass</h4>
+                                <p>7:00 AM at St Mary's Senga Parish</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-church"></i>
+                            <div class="activity-details">
+                                <h4>Wednesday Mass</h4>
+                                <p>6:30 PM at St Mary's Senga Parish</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-book-bible"></i>
+                            <div class="activity-details">
+                                <h4>Monday Session</h4>
+                                <p>6:30 PM at St Mary's Senga Parish Hall</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MSU Catholic Students Union - Midlands State University</p>
+        <p>For God and Learning</p>
+    </footer>
+</body>
+</html> 

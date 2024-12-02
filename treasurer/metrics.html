@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Metrics - MSU CATHSOC</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>MSU Catholic Students Union</h1>
+            <p>Financial Metrics & Reports</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Main Site</a></li>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="payments.html">Manage Payments</a></li>
+                <li><a href="metrics.html" class="active">Financial Metrics</a></li>
+                <li><a href="#" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <!-- Summary Cards -->
+        <section class="metrics-summary">
+            <div class="grid grid-4">
+                <div class="card metric-card">
+                    <h3>Total Revenue</h3>
+                    <p class="metric-value">$2,500.00</p>
+                    <p class="metric-change positive">+15% from last month</p>
+                </div>
+                <div class="card metric-card">
+                    <h3>Subscriptions</h3>
+                    <p class="metric-value">$1,200.00</p>
+                    <p class="metric-change positive">+8% from last month</p>
+                </div>
+                <div class="card metric-card">
+                    <h3>Event Revenue</h3>
+                    <p class="metric-value">$800.00</p>
+                    <p class="metric-change positive">+25% from last month</p>
+                </div>
+                <div class="card metric-card">
+                    <h3>Sunday Offerings</h3>
+                    <p class="metric-value">$500.00</p>
+                    <p class="metric-change neutral">No change</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Revenue Charts -->
+        <section class="revenue-charts">
+            <div class="grid grid-2">
+                <!-- Monthly Revenue Trend -->
+                <div class="card">
+                    <h3>Monthly Revenue Trend</h3>
+                    <div class="chart-container">
+                        <!-- Placeholder for chart -->
+                        <div style="height: 300px; background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                            Monthly Revenue Chart
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Revenue Distribution -->
+                <div class="card">
+                    <h3>Revenue Distribution</h3>
+                    <div class="chart-container">
+                        <!-- Placeholder for pie chart -->
+                        <div style="height: 300px; background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                            Revenue Distribution Pie Chart
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Reports -->
+        <section class="detailed-reports">
+            <h2>Detailed Reports</h2>
+            
+            <!-- Report Filters -->
+            <div class="card">
+                <div class="filters-grid">
+                    <div class="form-group">
+                        <label for="reportType">Report Type</label>
+                        <select id="reportType">
+                            <option value="summary">Summary Report</option>
+                            <option value="detailed">Detailed Report</option>
+                            <option value="subscription">Subscription Report</option>
+                            <option value="event">Event Revenue Report</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="reportPeriod">Period</label>
+                        <select id="reportPeriod">
+                            <option value="this_month">This Month</option>
+                            <option value="last_month">Last Month</option>
+                            <option value="this_quarter">This Quarter</option>
+                            <option value="this_year">This Year</option>
+                            <option value="custom">Custom Range</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Generate Report</button>
+                        <button class="btn btn-secondary">Export to Excel</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Report Table -->
+            <div class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Current Period</th>
+                            <th>Previous Period</th>
+                            <th>Change</th>
+                            <th>% Change</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Subscriptions</td>
+                            <td>$1,200.00</td>
+                            <td>$1,100.00</td>
+                            <td>+$100.00</td>
+                            <td class="positive">+9.1%</td>
+                        </tr>
+                        <tr>
+                            <td>Event Revenue</td>
+                            <td>$800.00</td>
+                            <td>$600.00</td>
+                            <td>+$200.00</td>
+                            <td class="positive">+33.3%</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday Offerings</td>
+                            <td>$500.00</td>
+                            <td>$500.00</td>
+                            <td>$0.00</td>
+                            <td class="neutral">0%</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Total</th>
+                            <th>$2,500.00</th>
+                            <th>$2,200.00</th>
+                            <th>+$300.00</th>
+                            <th class="positive">+13.6%</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <!-- Key Insights -->
+        <section class="insights">
+            <h2>Key Insights</h2>
+            <div class="grid grid-3">
+                <div class="card insight-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Growth Trend</h3>
+                    <p>Overall revenue has shown consistent growth over the past 3 months.</p>
+                </div>
+                <div class="card insight-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Member Participation</h3>
+                    <p>85% of members are up to date with their subscriptions.</p>
+                </div>
+                <div class="card insight-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Event Success</h3>
+                    <p>Recent events have shown 25% higher participation rate.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MSU Catholic Students Union - Midlands State University</p>
+        <p>For God and Learning</p>
+    </footer>
+</body>
+</html> 
